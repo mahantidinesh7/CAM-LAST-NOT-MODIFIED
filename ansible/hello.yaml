@@ -1,0 +1,14 @@
+- name: This is a hello-world example
+  hosts: all
+  remote_user: "{{remote_user}}"
+  #vars_files:
+  #  - variable_test.yml
+
+  tasks:
+    - name: Create a file called 'testfile.txt' with content 
+      copy:
+        content: "hello {{test}}, on Ansible!"
+        dest: /tmp/testfile3
+        force: yes
+  #become: true
+  #become_method: sudo
