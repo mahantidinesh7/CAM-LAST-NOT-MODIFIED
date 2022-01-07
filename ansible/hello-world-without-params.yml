@@ -1,0 +1,9 @@
+- name: This is a hello-world example
+  hosts: all
+  
+  tasks:
+    - name: Create a file called 'testfile.txt' with content 
+      copy:
+        content: "hello world, on Ansible!"
+        dest: /tmp/testfile
+        force: yes
